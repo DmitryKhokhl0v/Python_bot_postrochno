@@ -1,0 +1,22 @@
+import logging
+
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import Updater, CallbackQueryHandler, CommandHandler, MessageHandler, Filters
+
+# Устанавливаем журналирование
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Определяем кнопки для клавиатуры
+keyboard = [
+    [InlineKeyboardButton("Исследовать место преступления", callback_data='explore')],
+    [InlineKeyboardButton("Дать ответ", callback_data='answer')]
+]
+reply_markup = InlineKeyboardMarkup(keyboard)
+
+# Перечисляем объекты для расследования
+objects = {
+    'nifnif': {'name': 'НИФ-НИФ', 'description': 'Тело без головы'},
+    'nafnaf': {'name': 'НАФ-НАФ', 'description': 'Тело отравленное'},
+    'nufnuf': {'name': 'НУФ-НУФ', 'description': 'Тело отравленное'}
+}
