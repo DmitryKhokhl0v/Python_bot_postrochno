@@ -12,12 +12,12 @@ story_name = ''
 
 
 @dp.message_handler(commands=['start'])  # Явно указываем в декораторе, на какую команду реагируем.
-async def send_welcome(message: types.Message):
+async def send_welcome(message: types.Message): #
     kb = [
-        [types.KeyboardButton(text="Я хочу создать свой собственный квест!", callback_data='ready_tw')],
-        [types.KeyboardButton(text="Я хочу прочесть истории других людей!", callback_data='ready_tr')]
+        [types.KeyboardButton(text="Я хочу создать свой собственный квест!", callback_data='ready_tw')], #Создаём на выбор две кнопки клавиатуры,
+        [types.KeyboardButton(text="Я хочу прочесть истории других людей!", callback_data='ready_tr')]   #чтобы бот определил, что хочет пользователь
     ]
-    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True) #создание клавиатуры
     welcome_message = f"Приветствую тебя, поэт-путник, в мире стихов и рифм! \n Я твой верный помощник, бот, " \
                       f"но душа у меня жива. \n Записывать и читать стихи - вот мое призвание, \n С радостью я помогу "\
                       f"воплотить в них твое вдохновение. "
