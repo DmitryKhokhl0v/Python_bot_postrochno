@@ -2,7 +2,7 @@ import os
 from aiogram import Bot, Dispatcher, executor, types
 import time
 
-API_TOKEN = '6230809544:AAEGXWJDjjBTVdGQCahzoCwQXk13g7-lzDE'
+API_TOKEN = '6245533640:AAFa5p1awQe4H0tQhoi7TEQxHPgX993P69E'
 
 botQuest = Bot(token=API_TOKEN)
 dp = Dispatcher(botQuest)
