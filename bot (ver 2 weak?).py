@@ -3,14 +3,13 @@ import os
 from aiogram import Bot, Dispatcher, executor, types
 import time
 
-API_TOKEN = '6230809544:AAEGXWJDjjBTVdGQCahzoCwQXk13g7-lzDE'
+API_TOKEN = '6245533640:AAFa5p1awQe4H0tQhoi7TEQxHPgX993P69E'
 
 botQuest = Bot(token=API_TOKEN)
 dp = Dispatcher(botQuest)
 story_wait = False
 now_w = False
 story_name = ''
-
 
 @dp.message_handler(commands=['start'])  # Явно указываем в декораторе, на какую команду реагируем.
 async def send_welcome(message: types.Message):
@@ -60,20 +59,7 @@ async def communicate(message: types.Message):
             await message.reply("Файл не найден")
 
     else:
-        if callback_data == "Начнём запис
-
-
-
-16.06.2023, 13:02:24
-
-ты не закончил
-
-16.06.2023, 13:02:55
-
-Извините, по какой-то причине текст не дошел до конца. Продолжаю.
-
-else:
-    if callback_data == "Начнём запись":
+         if callback_data == "Начнём запись":
         await message.reply(text="Хорошо, начнём! Сначала название, потом всё остальное.",
                             reply_markup=types.ReplyKeyboardRemove())
 
